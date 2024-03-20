@@ -1,3 +1,5 @@
+pip install tiktoken
+
 import streamlit as st
 import tiktoken
 from loguru import logger
