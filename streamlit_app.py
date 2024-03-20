@@ -1,4 +1,4 @@
-pip install tiktoken
+!pip install tiktoken
 
 import streamlit as st
 import tiktoken
