@@ -1,3 +1,5 @@
+!pip install tiktoken langchain openai loguru streamlit
+
 
 import streamlit as st
 import tiktoken
