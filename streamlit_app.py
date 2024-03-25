@@ -53,7 +53,7 @@ def main():
     
     if 'messages' not in st.session_state:
         st.session_state['messages'] = [{"role": "system", 
-                                        "content": "당신은 법령 또는 지침과 같이 편,장,절,조,항,호,목으로 구성된 법령 서식 표준을 기반으로 작성된 문서를 읽고 목차를 생성해 줍니다. 서식 표준을 구성하는 항목은 생략될 수도 있으며, 문장 내에 혼합되어 있기도 합니다. SQ3R기법으로 문서를 읽고, 목차를 구성하는데에 활용하세요."}
+                                        "content": "당신은 법령 또는 지침과 같이 편,장,절,조,항,호,목으로 구성된 법령 서식 표준을 기반으로 작성된 문서를 읽고 목차를 생성해 줍니다. 서식 표준을 구성하는 항목은 생략될 수도 있으며, 문장 내에 혼합되어 있기도 합니다. SQ3R기법으로 문서를 읽고, 목차를 구성하는데에 활용하세요.목차를 구성할 때에는 편,장,절,조,항,호,목과 같은 표현을 그대로 사용합니다."}
                                         ,{"role": "assistant", 
                                         "content": "안녕하세요! 주어진 문서에 대해 궁금하신 것이 있으면 언제든 물어봐주세요!"}]
 
@@ -122,7 +122,7 @@ def get_text(docs):
 def get_text_chunks(text):
     text_splitter = RecursiveCharacterTextSplitter(
         chunk_size=2000,
-        chunk_overlap=100,
+        chunk_overlap=1000,
         length_function=tiktoken_len
     )
     chunks = text_splitter.split_documents(text)
