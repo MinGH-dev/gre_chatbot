@@ -82,7 +82,7 @@ def main():
 
                 st.markdown(response)
                 with st.expander("참고 문서 확인"):
-                    for sour_doc in source_documents
+                    for sour_doc in source_documents :
                         st.markdown(sour_doc.metadata['source'], help = sour_doc.page_content)
                     
 
